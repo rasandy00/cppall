@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: landriam <landriam@student.42antananarivo  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/20 11:21:14 by landriam          #+#    #+#             */
+/*   Updated: 2026/06/21 16:23:33 by landriam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CURE_HPP
+# define CURE_HPP
+
+# include <string>
+# include "AMateria.hpp"
+
+class Cure : public AMateria {
+
+	public:
+
+		Cure( void );
+		Cure( const Cure& other );
+		Cure&	operator=( const Cure& other );
+		~Cure( void );
+
+		std::string const & getType() const;
+		AMateria* clone() const;
+		void use(ICharacter& target);
+};
+
+#endif
